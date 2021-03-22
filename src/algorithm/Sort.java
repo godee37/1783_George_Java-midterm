@@ -40,6 +40,7 @@ public class Sort {
         final long startTime = System.currentTimeMillis();
         int[] list = array;
         //implement here
+        System.out.println("Testing and will delete immediately");
 
         final long endTime = System.currentTimeMillis();
         final long executionTime = endTime - startTime;
