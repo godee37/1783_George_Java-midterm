@@ -1,7 +1,6 @@
 package math.problems;
 
 import java.util.Arrays;
-import java.util.Collections;
 
 public class FindLowestDifference {
 
@@ -10,11 +9,8 @@ public class FindLowestDifference {
          Write a method to return the the lowest difference between these two arrays
             HINT: The lowest difference between these arrays is 1
         */
-                    array2();
-                  //  array(array2());
-    }
-        public static char[] array2 () {
-            int result;
+
+
             // first array
             int[] array1 = {30, 12, 5, 9, 2, 20, 33, 1};
 
@@ -41,23 +37,21 @@ public class FindLowestDifference {
 
             // prints the resultant array
             System.out.println(Arrays.toString(totalResult));
+            int min = getMin(totalResult);
+            System.out.println(min);
 
-
-            return new char[0];
         }
 
-        public static char[] array (int value2) {
-//        int[] value1 = new int[]{4, 9, 1, 32, 13};
-            char[] value1 = FindLowestDifference.array2();
-            Arrays.sort(value1);
-            int minDiff = value1[1] - value1[0];
-            for (int i = 2; i != value1.length; i++) {
-                minDiff = Math.min(minDiff, value1[i] - value1[i - 1]);
+        public static int getMin(int []inputArray){
+        int minValue = inputArray[0];
+        for (int i = 1; i < inputArray.length; i++){
+            if (inputArray[i]< minValue){
+                minValue = inputArray[i];
             }
+        }
 
- // System.out.println(minDiff);
+            return minValue;
 
-            return value1;
         }
 
     }
