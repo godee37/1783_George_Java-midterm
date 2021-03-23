@@ -18,7 +18,7 @@ public class CsvReader {
 
         String csvFilePath = System.getProperty("user.dir") + "/src/codelab/status/roster.csv";
         String line = "";
-        String csvSplitBy = ",";
+        String csvSplitBy = " ";
         BufferedReader br = null;
         List<Trainee> roster = new ArrayList<>();
 
@@ -60,6 +60,7 @@ public class CsvReader {
                 System.out.print("You are in bad shape !-->                           ");
                 System.out.println(student.getFirstName() + " " + student.getLastName() + " " + student.getNumberOfExercisesSolved());
             }
+
         }
     }
 }
