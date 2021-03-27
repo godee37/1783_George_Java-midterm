@@ -7,6 +7,9 @@ public class UnitTestSorting {
     /*
       This class is used to help with unit testing of sorting algorithms from the Sort class
      */
+        /*
+      This class is used to help with unit testing of sorting algorithms from the Sort class
+     */
     public static void main(String[] args) {
         int[] unSortedArray = {6, 9, 2, 5, 1, 0, 4};
         int[] sortedArray = {0, 1, 2, 4, 5, 6, 9};
@@ -16,6 +19,10 @@ public class UnitTestSorting {
 
         // Pass the unsorted array to selectionSort() method from Sort class
         sort.selectionSort(unSortedArray);
+        for(int x: unSortedArray){
+            System.out.println(x);
+        }
+        Assert.assertEquals(sortedArray, unSortedArray, "ARRAY IS NOT SORTED... YET!\n***YOU GOT THIS!***");
 
         // Verify if the unsorted array is sorted by the selectionSort() method
         try {
